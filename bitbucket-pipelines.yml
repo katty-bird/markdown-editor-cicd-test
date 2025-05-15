@@ -19,11 +19,11 @@ pipelines:
         script:
           # Login to Docker registry
           - echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin $DOCKER_REGISTRY
-          
+
           # Build Docker image
           - docker build -t $DOCKER_REGISTRY/markdown-editor:$BITBUCKET_COMMIT .
           - docker tag $DOCKER_REGISTRY/markdown-editor:$BITBUCKET_COMMIT $DOCKER_REGISTRY/markdown-editor:latest
-          
+
           # Push Docker images
           - docker push $DOCKER_REGISTRY/markdown-editor:$BITBUCKET_COMMIT
           - docker push $DOCKER_REGISTRY/markdown-editor:latest

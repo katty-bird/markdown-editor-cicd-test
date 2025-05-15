@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -24,7 +24,6 @@ jobs:
 
       - name: Run unit tests
         run: npm test
-
 
   build-and-push:
     needs: test

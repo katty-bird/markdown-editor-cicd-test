@@ -13,15 +13,43 @@ function App() {
   }, []);
 
   if (!largePayload) {
-    return <div>Loading...</div>; 
+    return <div>Loading...</div>;
   }
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#f3f4f6', minHeight: '100vh' }}>
-      <h1 style={{ textAlign: 'center', color: '#0052CC', fontSize: '2rem', margin: '16px', padding: '16px' }}>Markdown Editor</h1>
-      <div style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '16px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', backgroundColor: '#fff', maxWidth: '90%', margin: 'auto' }}>
+    <div
+      style={{
+        padding: '20px',
+        backgroundColor: '#f3f4f6',
+        minHeight: '100vh',
+      }}
+    >
+      <h1
+        style={{
+          textAlign: 'center',
+          color: '#0052CC',
+          fontSize: '2rem',
+          margin: '16px',
+          padding: '16px',
+        }}
+      >
+        Markdown Editor
+      </h1>
+      <div
+        style={{
+          border: '1px solid #ccc',
+          borderRadius: '8px',
+          padding: '16px',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          backgroundColor: '#fff',
+          maxWidth: '90%',
+          margin: 'auto',
+        }}
+      >
         <MDEditor
-          value={largePayload.map((item) => `# ${item.title}\n\n${item.content}\n---\n`).join('\n')}
+          value={largePayload
+            .map((item) => `# ${item.title}\n\n${item.content}\n---\n`)
+            .join('\n')}
           onChange={setValue}
           height={500}
         />

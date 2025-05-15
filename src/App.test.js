@@ -13,10 +13,10 @@
 //   expect(markdownText).toBeInTheDocument();
 // });
 
-import { render, screen } from "@testing-library/react";
-import React from "react";
+import { render, screen } from '@testing-library/react';
+import React from 'react';
 
-test("renders a placeholder test", () => {
+test('renders a placeholder test', () => {
   render(<div>Hello, World!</div>);
   const element = screen.getByText(/Hello, World!/i);
   expect(element).toBeInTheDocument();

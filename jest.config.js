@@ -1,14 +1,14 @@
 module.exports = {
   transform: {
-    "^.+\\.jsx?$": "babel-jest",
-    "^.+\\.mjs$": "babel-jest",
+    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.mjs$': 'babel-jest',
   },
   transformIgnorePatterns: [
-    "node_modules/(?!(rehype-prism-plus|react-md-editor)/)",
+    'node_modules/(?!(rehype-prism-plus|react-md-editor)/)',
   ],
   moduleNameMapper: {
-    "^.+\\.(css|less|scss)$": "identity-obj-proxy",
+    '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
   },
-  extensionsToTreatAsEsm: [".jsx", ".js", ".mjs"],
-  testEnvironment: "jsdom",
+  extensionsToTreatAsEsm: ['.jsx', '.js', '.mjs'],
+  testEnvironment: 'jsdom',
 };
